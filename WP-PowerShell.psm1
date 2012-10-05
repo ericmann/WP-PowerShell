@@ -24,7 +24,9 @@ Function WP
 	
 	$scriptPath = Get-PathToCli $cliPath
     
-    $cli = $cliPath + "\wp-cli\wp-cli-boot.php"
+    $cli = Join-Path $scriptPath \wp-cli\wp-cli-boot.php
+    
+    php $cli $commands
 }
 
 Function Get-PathToCli
@@ -38,7 +40,7 @@ Function Get-PathToCli
     .EXAMPLE
         Get-PathToCli
         
-        Get-PathToCli "C:\xampp"
+        Get-PathToCli "C:\xampp\htdocs\wp-cli\src\php"
     #>
     param(
         [string] $userPath
@@ -47,6 +49,8 @@ Function Get-PathToCli
     if ( $userPath -ne "" ) {
         return $userPath
     }
-        
-    return "C:\Tools\wp-cli\src\php"
+    
+    $path = Join-Path $PSScriptRoot wp-cli\src\php -Resolve
+    
+    return $path
 }
