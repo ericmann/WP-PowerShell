@@ -1,0 +1,3 @@
+[submodule "wp-cli"]
+	path = wp-cli
+	url = git://github.com/wp-cli/wp-cli.git
