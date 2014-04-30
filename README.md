@@ -14,6 +14,10 @@ Installing
 
 Clone the repository into [User]/Documents/WindowsPowerShell/Modules.
 
+Run `git submodule init` to initialize the WP-CLI submodule
+
+Run `git submodule update` to pull upstream changes for WP-CLI
+
 Run `Import-Module WP-PowerShell` from the PowerShell prompt.
 
 Using
