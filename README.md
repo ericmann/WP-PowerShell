@@ -1,6 +1,8 @@
 WP-PowerShell
 =============
 
+**This project is no longer under active development. Feel free to fork.**
+
 Windows PowerShell wrapper for WordPress CLI tools.
 
 Requirements
